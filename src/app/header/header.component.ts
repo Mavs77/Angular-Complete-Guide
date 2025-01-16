@@ -1,18 +1,14 @@
-
-// Brings in the component class from Angular's core library (located in your project's node_modules folder). This class allows us to define a component, which is like a building block of an Angular app. 
+// Brings in the component class from Angular's core library (located in your project's node_modules folder). This class allows us to define a component, which is like a building block of an Angular app.
 import { Component } from '@angular/core';
-
 
 @Component({
   selector: 'app-header',
   standalone: true,
   imports: [],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.css'
+  styleUrl: './header.component.css',
 })
-export class HeaderComponent {
-
-}
+export class HeaderComponent {}
 
 // The @Component is a decorator that tells Angular:
 // "Hey, this class is a component, and here’s how it should behave."
@@ -37,7 +33,6 @@ export class HeaderComponent {
 
 // This points to the HTML file that defines what this component looks like.
 // Example: <h1>Welcome to My App</h1>
-
 
 // styleUrl: './header.component.css'
 
