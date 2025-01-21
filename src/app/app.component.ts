@@ -25,7 +25,7 @@ export class AppComponent {
   selectedUserID = 'u1';
 
   get selectedUser() {
-    return this.users.find((user) => user.id === this.selectedUserID)!;
+    return this.users.find((user) => user.id === this.selectedUserID)!; //the exclamation point is assuring typescript that we will find a user with an ID that matches the value provided by selectedUserID. Without this exclamation TS correctly points out that the find method MIGHT NOT find a user and we need to account for that in some way. It just so happens that how we account for it is by using the exclamation symbol which = "Trust me bro"
   }
 
   onSelectUser(id: string) {
@@ -37,3 +37,5 @@ export class AppComponent {
 //1. Understand what the component does.
 //2. Manage the data and behavior within the component
 //3. Connect it to the broader app structure.
+
+//Note: it typically does not make sense for the root component in an Angular projects to have an @Input decorator because there's not parent component to pass data to it.

@@ -11,6 +11,8 @@ import { CardComponent } from '../shared/card/card.component';
 // Example:
 // const newUser: User = { id: '123', name: 'John Doe', avatar: 'https://example.com/avatar.jpg' };
 
+//{ } = configuration objects or plain objects that provide additional info or settings about the data you're working with. These objects are used in various contexts throughout Angular.
+
 @Component({
   selector: 'app-user',
   standalone: true,
@@ -23,6 +25,7 @@ export class UserComponent {
   @Input({ required: true }) selected!: boolean;
   @Output() select = new EventEmitter<string>();
 
+  //the "this" key word is how you access properties from a class within the same class
   get imagePath() {
     return '../assets/users/users/' + this.user.avatar;
   }
